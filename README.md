@@ -79,3 +79,36 @@ The grapher will also output this data, in CSV format, to the file specified as 
 This section contains advanced controls and parameters that you should probably not need to use.
 The `Automatic step size` controls the initial step size of the automatic seek algorithm; change it if the initial value is too small/large for a particular situation.
 The `Reseek` button will reset the automatic mode step size to the value specified in the `Automatic step size` control; use this if the algorithm gets "lost" and you would like it to try to find a new ideal frequency (for example, you might use this if you've been running the beam for a long time and the automatic mode isn't reacting fast enough to the changes).
+
+## Technical notes
+The following are various general notes that may be useful when inspecting the LabVIEW code or output.
+
+### Data file format
+All data files consumed or produced by any part of this project will follow the following column format (in CSV format):
+1. Eventnum (a Unix timestamp; see below)
+2. Polarization
+3. Frequency (optional)
+4. Rate (optional)
+Optional columns may not be present in some output files depending on context.
+However, if, for example, column 4 is present, all preceding columns must be present (possibly with no data or N/A specified in the column).
+All columns except the first two will typically be different for experimental output files; this is not a problem, as the VI will only process the first two values.
+
+### Time/eventnum format
+All timestamps in input/output files are Unix timestamps; they count the number of seconds since January 1, 1970 at midnight UTC.
+In VIs where a timestamp is given to a LabVIEW control, it must be converted to the epoch used by LabVIEW, which starts at January 1, 1904 at midnight UTC.
+Helper VIs to perform these conversions are located under `Useful subvis`.
+
+### Loop control and exiting
+Since many loops are used to perform different tasks throughout the project, there must be a way to ensure all the loops are stopped when the used presses `STOP COMMUNICATION` on the main VI.
+This is achieved through the use of `queue` structures; a queue is created which holds boolean values, and which is periodically checked by each loop for a `true` signal waiting in the queue.
+When a `true` signal is detected in the queue by any loop, it will stop execution.
+Thus, to stop all the loops, all that is needed is to insert `true` into the queue.
+A queue is used rather than a notifier because a notifier will block until a specified timeout trying to receive a notification, while a queue can be checked for the presence of a notification without using a timeout.
+
+### Motor communication and commands
+Motor communication is done via RS232, at a default baud of `38400`.
+There are various commands which can be sent to the motor, and most of these will return some data which can be processed by the VI.
+Commands sent to the motor should always be terminated with a carriage return character (`0x0D`, or `\r`), and a carriage return character will always terminate every line of data sent back by the motor.
+A subvi to make this process easier (automatically formats input and output) is included under `Useful subvis`.
+
+The commands which can be sent to the motor can be found in the manual, and most are not very useful for our application. Multiple commands can be given at once by separating them by a semicolon, e.g. `dis 0.01; mi` to set the move distance to `0.01 revolutions` and then to move the motor accordingly.
