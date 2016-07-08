@@ -2,11 +2,6 @@
 
 A controller for the PTGroup stepper motor microwave generator.
 
-## Using the project
-1. Open the motor_controller.lvproj project
-2. Within the project viewer, open motor_controller.vi
-3. Run the project
-
 ## Modifying the project
 There is a git repository in this folder so that you can branch/do whatever with it.
 Hosted under `ptgroup2@bitbucket.org/ptgroup2/stepper-motor-controller` (private repo)
@@ -19,6 +14,9 @@ Here, you must select the COM port of the motor before starting the controller.
 Once you select a port, you can press the "run" button of the VI to run the controller.
 The `STOP COMMUNICATION` button is used to cleanly shut down the controller;
 you should always use this rather than the VI stop button if possible.
+After pressing `STOP COMMUNICATION`, please be patient if it doesn't shut down immediately;
+since there are multiple processes running in the background, some of which have built-in delays,
+it may take a few seconds to exit them cleanly.
 
 ### Manual motor control
 These controls allow you to move the motor manually when automatic mode is not running.
