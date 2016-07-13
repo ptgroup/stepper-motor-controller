@@ -1,8 +1,2 @@
+time 10
 pause
-freq 140.15
-time 1000
-
-pause
-time 2000
-die
-time 3000
