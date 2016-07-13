@@ -1,4 +1,4 @@
-delay 10
-freq 139.951
-time 100
+time 10
+reset
+time 10
 pause
