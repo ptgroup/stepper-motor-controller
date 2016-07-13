@@ -1,2 +1,4 @@
-time 10
+print 1 2 3
+print 4 5 6
+freq 140.2
 pause
