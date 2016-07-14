@@ -1,4 +1,10 @@
-time 10
+# This is a comment
+
+rand 1
+delay 10
+freq 140.15
+time 100
 reset
-time 10
+freq 140.45
+time 100
 pause
