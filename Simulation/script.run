@@ -1,10 +1,11 @@
 # This is a comment
 
-rand 1
-delay 10
+mi on
+delay 1000
 freq 140.15
-time 100
-reset
+time 10
+print Now here is some test stuff
 freq 140.45
-time 100
+microwave off
 pause
+time 20
