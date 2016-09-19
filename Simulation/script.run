@@ -1,11 +1,5 @@
-# This is a comment
-
-mi on
-delay 1000
+print Starting rampup at 140.15 GHz
 freq 140.15
-time 10
-print Now here is some test stuff
-freq 140.45
-microwave off
+delay 1000
+time 100
 pause
-time 20
