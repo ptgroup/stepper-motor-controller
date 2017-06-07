@@ -4,7 +4,7 @@ A controller for the PTGroup stepper motor microwave generator.
 
 ## Modifying the project
 There is a git repository in this folder so that you can branch/do whatever with it.
-Hosted under `ptgroup2@bitbucket.org/ptgroup2/stepper-motor-controller` (private repo)
+Hosted under `https://github.com/ptgroup/stepper-motor-controller`.
 
 ## Controller usage
 The following describes the usage of the various "panes" on the front panel of the controller.
