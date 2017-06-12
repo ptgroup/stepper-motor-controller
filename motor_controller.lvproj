@@ -10,49 +10,17 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Automatic mode" Type="Folder">
-			<Item Name="add_rate.vi" Type="VI" URL="../Automatic mode/add_rate.vi"/>
-			<Item Name="process_data.vi" Type="VI" URL="../Automatic mode/process_data.vi"/>
+		<Item Name="Automatic mode" Type="Folder" URL="../Automatic mode">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Grapher" Type="Folder">
-			<Item Name="grapher.vi" Type="VI" URL="../Grapher/grapher.vi"/>
-			<Item Name="write_output.vi" Type="VI" URL="../Grapher/write_output.vi"/>
+		<Item Name="Grapher" Type="Folder" URL="../Grapher">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Simulation" Type="Folder">
-			<Item Name="Fit parameters chooser" Type="Folder">
-				<Item Name="fit_parameters_chooser.vi" Type="VI" URL="../Simulation/Fit parameters chooser/fit_parameters_chooser.vi"/>
-				<Item Name="steady_state.vi" Type="VI" URL="../Simulation/Fit parameters chooser/steady_state.vi"/>
-			</Item>
-			<Item Name="apply_randomness.vi" Type="VI" URL="../Simulation/apply_randomness.vi"/>
-			<Item Name="calc_alpha_beta.vi" Type="VI" URL="../Simulation/calc_alpha_beta.vi"/>
-			<Item Name="calc_pol_scaling_params.vi" Type="VI" URL="../Simulation/calc_pol_scaling_params.vi"/>
-			<Item Name="calc_time_scaling_params.vi" Type="VI" URL="../Simulation/calc_time_scaling_params.vi"/>
-			<Item Name="fit_parameters.ctl" Type="VI" URL="../Simulation/fit_parameters.ctl"/>
-			<Item Name="internal_parameters.ctl" Type="VI" URL="../Simulation/internal_parameters.ctl"/>
-			<Item Name="physical_constants.ctl" Type="VI" URL="../Simulation/physical_constants.ctl"/>
-			<Item Name="set_temperature.vi" Type="VI" URL="../Simulation/set_temperature.vi"/>
-			<Item Name="simulation.vi" Type="VI" URL="../Simulation/simulation.vi"/>
-			<Item Name="single_time_step.vi" Type="VI" URL="../Simulation/single_time_step.vi"/>
-			<Item Name="system_parameters.ctl" Type="VI" URL="../Simulation/system_parameters.ctl"/>
-			<Item Name="time_step.vi" Type="VI" URL="../Simulation/time_step.vi"/>
-			<Item Name="update_polarization.vi" Type="VI" URL="../Simulation/update_polarization.vi"/>
+		<Item Name="Motor controller" Type="Folder" URL="../Motor controller">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Useful subvis" Type="Folder">
-			<Item Name="append_line_to_string.vi" Type="VI" URL="../Useful subvis/append_line_to_string.vi"/>
-			<Item Name="calculate_frequency_params.vi" Type="VI" URL="../Useful subvis/calculate_frequency_params.vi"/>
-			<Item Name="diag_output.vi" Type="VI" URL="../Useful subvis/diag_output.vi"/>
-			<Item Name="get_last_row.vi" Type="VI" URL="../Useful subvis/get_last_row.vi"/>
-			<Item Name="get_notification_from_queue.vi" Type="VI" URL="../Useful subvis/get_notification_from_queue.vi"/>
-			<Item Name="is_path_invalid.vi" Type="VI" URL="../Useful subvis/is_path_invalid.vi"/>
-			<Item Name="labview_time_to_unix.vi" Type="VI" URL="../Useful subvis/labview_time_to_unix.vi"/>
-			<Item Name="motor_write_then_read.vi" Type="VI" URL="../Useful subvis/motor_write_then_read.vi"/>
-			<Item Name="select_filepath_if_none.vi" Type="VI" URL="../Useful subvis/select_filepath_if_none.vi"/>
-			<Item Name="send_notification.vi" Type="VI" URL="../Useful subvis/send_notification.vi"/>
-			<Item Name="setup_serial.vi" Type="VI" URL="../Useful subvis/setup_serial.vi"/>
-			<Item Name="stop_on_notification.vi" Type="VI" URL="../Useful subvis/stop_on_notification.vi"/>
-			<Item Name="string_begins_with.vi" Type="VI" URL="../Useful subvis/string_begins_with.vi"/>
-			<Item Name="unix_time_to_labview.vi" Type="VI" URL="../Useful subvis/unix_time_to_labview.vi"/>
-			<Item Name="wait_non_blocking.vi" Type="VI" URL="../Useful subvis/wait_non_blocking.vi"/>
+		<Item Name="Simulation" Type="Folder" URL="../Simulation">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="motor_controller.vi" Type="VI" URL="../motor_controller.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
