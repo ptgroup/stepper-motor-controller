@@ -16,6 +16,9 @@
 		<Item Name="Motor controller" Type="Folder" URL="../Motor controller">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name="Power control" Type="Folder" URL="../Power control">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="Simulation" Type="Folder" URL="../Simulation">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
