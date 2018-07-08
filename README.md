@@ -201,6 +201,14 @@ useful to prevent it from getting lost. The `Home position` is the
 frequency at which the algorithm will start: you should set this as
 close to the optimal frequency as possible.
 
+After a certain time (configurable in the [advanced configuration
+pane](#advanced-config)), the automatic seek will switch from a rate-based
+search to a polarization-based search. The countdown timer shows how much
+time is left before this switch occurs. If desired, the countdown can be
+reset, returning to a rate-based search and restarting the timer. The button
+next to the countdown timer can also be used to disable the timer entirely
+and control the choice of algorithm manually.
+
 #### Grapher <a name="grapher"></a>
 
 When automatic control is enabled, a subVI will appear which contains
