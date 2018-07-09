@@ -250,6 +250,16 @@ frequency (for example, you might use this if you've been running the
 beam for a long time and the automatic mode isn't reacting fast enough
 to the changes).
 
+The `"Good" rate threshold` controls an internal detail of the rate-based
+automatic seek algorithm, namely, the minimum ratio of new rate to old rate
+that should be considered "acceptable" by the algorithm. If the ratio is less
+than this threshold, the algorithm will begin trying frequencies in the
+direction opposite to wherever it was searching before (a more detailed
+description of the algorithm is outside the scope of this document). In
+practice, this means that the higher the threshold, the more "picky" the
+algorithm is in finding a good frequency, with the possible negative effect
+that it will be easily confused by naturally decreasing rates over time.
+
 The `Algorithm switch time` controls the point at which the automatic seek
 algorithm should switch from a rate-based search to a polarization-based
 search. The intent of this setting is to make the algorithm more effective
