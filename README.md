@@ -358,6 +358,7 @@ follow the following column format (in CSV format):
 2. Polarization
 3. Frequency (optional)
 4. Rate (optional)
+5. Dose (optional)
 
 Optional columns may not be present in some output
 files depending on context. However, if, for example, column 4 is
