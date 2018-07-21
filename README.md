@@ -266,6 +266,20 @@ search. The intent of this setting is to make the algorithm more effective
 when changes in rate are very small and more focus should be put on improving
 the raw polarization value.
 
+The `Samples per step` field controls the number of samples that should be
+taken at each frequency encountered in automatic mode. The value must be at
+least 3; higher values will take longer to process, but may provide more
+precision due to random fluctuations in the data.
+
+When automatic mode is seeking by polarization, encountering a series of
+significant drops in polarization can be an indicator that something has
+changed in the physical system, and that the current stable position should
+be re-evaluated. This re-evaluation could take place manually using the
+`Reseek` button, but it will occur automatically after the automatic mode
+algorithm notices a series of consistent polarization drops. The number of
+drops that triggers the automatic reseek is controlled by the `Reseek after #
+bad` input.
+
 The `RESET EVERYTHING AND STOP` button will completely shut down the
 VI, without trying to do any of the helpful stuff that the `STOP
 COMMUNICATION` button does to make the shut-down a bit more graceful
