@@ -356,9 +356,11 @@ follow the following column format (in CSV format):
 
 1. Eventnum (a Unix timestamp; see below)
 2. Polarization
-3. Frequency (optional)
-4. Rate (optional)
-5. Dose (optional)
+3. Frequency (GHz) (optional)
+4. Rate (polarization/s) (optional)
+5. Dose (e-/cm^2) (optional)
+6. Optimal frequency for positive polarization (GHz) (optional)
+7. Optimal frequency for negative polarization (GHz) (optional)
 
 Optional columns may not be present in some output
 files depending on context. However, if, for example, column 4 is
