@@ -375,6 +375,8 @@ follow the following column format (in CSV format):
 5. Dose (e-/cm^2) (optional)
 6. Optimal frequency for positive polarization (GHz) (optional)
 7. Optimal frequency for negative polarization (GHz) (optional)
+8. Steady state at optimal positive frequency (optional)
+8. Steady state at optimal negative frequency (optional)
 
 Optional columns may not be present in some output
 files depending on context. However, if, for example, column 4 is
